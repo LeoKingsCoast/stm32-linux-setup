@@ -8,7 +8,38 @@ Esse repositório é um registro pessoal para preparar um sistema de desenvolvim
 
 ## Programas necessários
 
+### Instalação Mínima
+
+É necessário obter o pacote `stlink-tools` para fazer o upload dos códigos para
+a placa, o `gcc-arm-none-eabi` para fazer a compilação com o gcc.
+
+- Instalando com apt:
+```bash
+sudo apt install stlink-tools gcc-arm-none-eabi
+```
+
+- Instalando com pacman:
+```bash
+sudo pacman -S stlink arm-none-eabi-gcc arm-none-eabi-newlib
+```
+
+Esses pacotes são suficientes para escrever um código funcional e fazer o upload
+para uma placa STM32. Se quiser utilizar a CubeMX para gerar o código de setup e
+usar o framework HAL, baixe o programa pelo site da ST, descompacte a pasta de
+instalação para o Linux e siga as instruções do Readme deles. Ao final de uma
+instalação padrão, o executável da STM32CubeMX estará na seguinte localização:
+`/usr/local/STMicroelectronics/STM32Cube/STM32CubeMX/STM32CubeMX`.
+
+### Ferramentas para debugging e outras funcionalidades
+
 ## Configurações iniciais
+
+- Conecte o programador st-link ao seu computador ligado à placa STM32. Execute
+  o seguinte comando para verificar se seu computador detectou o dispositivo.
+```bash
+st-info --probe # Deve retornar "Found x stlink programmers" e outras informações
+```
+
 
 ## Gerando o código com a CubeMX
 
