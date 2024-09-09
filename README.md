@@ -47,7 +47,7 @@ Se você estiver usando um editor de texto diferente com LSP de C, ele provavelm
 sudo apt install bear
 sudo pacman -S bear
 # Executar no diretório do projeto
-bear -- make # O comando make compila seu projeto, e o bear lê cada comando executado para gerar o JSON para seu LSP
+bear -- make # O comando make compila seu projeto, o bear lê cada comando executado e gera o JSON para seu LSP
 ```
 
 ## Configurações iniciais
@@ -93,7 +93,7 @@ Core/Src/your_custom_library.c \ # <-- Adicionar esta linha
 
 ## Debugging
 
->[!warning] Problemas com o setup
+>[!WARNING]
 > Este setup funcionava há alguns meses atrás. Atualmente a placa para a execução dentro da função `HAL_Init` ao tentar debugar o código. Irei continuar a procura por uma solução em outro momento.
 
 Para fazer o debug do código, é possível utilizar o gdb juntamente com o OpenOCD.
